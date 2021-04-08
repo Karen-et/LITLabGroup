@@ -50,4 +50,27 @@ public class Actividad {
 	
 	
 	
+	//Constructores
+	
+	public Actividad(String nombre, char alcance, String lugar, Date fecha, String horario) {
+		this.nombre = nombre;
+		this.alcance = alcance;
+		this.lugar = lugar;
+		this.fecha = fecha;
+		this.horario = horario;
+	}
+	
+	public Actividad() {
+		this.nombre = "indefinido";
+		this.alcance = 'n'; //por defecto la actividad tiene alcance nacional.
+		this.lugar = "indefinido";
+		this.fecha = new Date();
+		this.horario = "indefinido";
+	}
+	
+	
+	
+	
+	
+	
 }
