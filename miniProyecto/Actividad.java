@@ -68,5 +68,12 @@ public class Actividad {
 		this.horario = "indefinido";
 	}
 	
+	@Override
+	public String toString() {
+		return "Actividad [nombre=" + nombre + ", alcance=" + alcance + ", lugar=" + lugar + ", fecha=" + fecha
+				+ ", horario=" + horario + "]";
+	}
+	
+	
 	
 }
