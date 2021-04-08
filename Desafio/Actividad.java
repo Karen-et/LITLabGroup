@@ -37,8 +37,34 @@ public class Actividad {
 				int[] notasE10 = {4,7,10};
 				estudiante[9] = new Estudiante(10, "Pepito", notasE10);
 				
-		
+				System.out.println(aprobados(estudiante));
 
+	}
+	
+	//Estudiantes con todas sus notas>=6.
+	public static int aprobados(Estudiante[] alumnos) {
+		
+		int cont = 0;
+		boolean aprobado;
+		
+		for(int i=0; i<10; i++) {
+			
+			aprobado = true;
+			int[] notas = alumnos[i].getNotas();
+			
+			for(int j=0; j<notas.length; j++) {
+				
+				if(notas[j]<6) {
+					aprobado = false;
+				}
+			}
+			
+			if(aprobado) {
+				cont++;
+			}
+		}
+		
+		return cont;
 	}
 	
 }
