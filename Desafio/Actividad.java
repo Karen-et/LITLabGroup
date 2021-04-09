@@ -67,11 +67,12 @@ public class Actividad {
 		return cont;
 	}
 	
-	public static Estudiante [] mostrarEstudiante (Estudiante [] alumnos) {
+	public static void mostrarEstudiante (Estudiante [] alumnos) {
+		int [] notas;
 		for (int i=0; i<alumnos.length; i++) {
-		System.out.println(alumnos[i]);
+			notas=alumnos[i].getNotas();	
+		System.out.println("Nombre: "+alumnos[i].nombre+", Preomedio "+(alumnos[i].promedio(notas)));
 		}
-		return alumnos;
 	}
 	
 }
