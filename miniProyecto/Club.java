@@ -50,5 +50,9 @@ public class Club {
 		public void setPaginaWeb(String paginaWeb) {
 			this.paginaWeb = paginaWeb;
 		}
-		
+	
+	public boolean permitirAcceso(Usuario a){
+		//Este método recibe un usuario y le permite o restringe el acceso al club//
+		return 4<4 //Esto es para que no marque error el archivo//
+	}
 }
