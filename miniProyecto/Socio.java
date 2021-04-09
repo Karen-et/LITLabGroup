@@ -2,11 +2,13 @@ package LITLabGroup.miniProyecto;
 
 import java.util.Date;
 
+//Socio hereda los atributos de Usuario.
+
 public class Socio {
     
 	//Atributos
 	private boolean esRepresenate;
-	private int añosDeAntiguedad;
+	private int aÃ±osDeAntiguedad;
 	private boolean esFuncionario;
 	public Date venFichaMedica;
 	
@@ -18,12 +20,12 @@ public class Socio {
 		this.esRepresenate = esRepresenate;
 	}
 	
-	//añosDeAntiguedad
-	public int getAñosDeAntiguedad() {
-		return añosDeAntiguedad;
+	//aÃ±osDeAntiguedad
+	public int getAÃ±osDeAntiguedad() {
+		return aÃ±osDeAntiguedad;
 	}
-	public void setAñosDeAntiguedad(int añosDeAntiguedad) {
-		this.añosDeAntiguedad = añosDeAntiguedad;
+	public void setAÃ±osDeAntiguedad(int aÃ±osDeAntiguedad) {
+		this.aÃ±osDeAntiguedad = aÃ±osDeAntiguedad;
 	}
 	
 	//esFuncionario
@@ -45,36 +47,36 @@ public class Socio {
 	
 	//Constructores
 	
-	public Socio(boolean esRepresenate, int añosDeAntiguedad, boolean esFuncionario, Date venFichaMedica) {
+	public Socio(boolean esRepresenate, int aÃ±osDeAntiguedad, boolean esFuncionario, Date venFichaMedica) {
 		this.esRepresenate = esRepresenate;
-		this.añosDeAntiguedad = añosDeAntiguedad;
+		this.aÃ±osDeAntiguedad = aÃ±osDeAntiguedad;
 		this.esFuncionario = esFuncionario;
 		this.venFichaMedica = venFichaMedica;
 	}
 	
 	
 	public Socio() {
-		this.añosDeAntiguedad = 0;
+		this.aÃ±osDeAntiguedad = 0;
 		this.venFichaMedica = new Date();
 	}
 	
 	//Metodos
 	@Override
 	public String toString() {
-		return "Socio [esRepresenate=" + esRepresenate + ", añosDeAntiguedad=" + añosDeAntiguedad + ", esFuncionario="
+		return "Socio [esRepresenate=" + esRepresenate + ", aÃ±osDeAntiguedad=" + aÃ±osDeAntiguedad + ", esFuncionario="
 				+ esFuncionario + ", venFichaMedica=" + venFichaMedica + "]";
 	}
 	
 	public boolean fichaMedicaVigente(Date hoy) {
 		
 		//Determina si la fecha de vencimiento es anterior a hoy
-		//de ser así retorna false.
+		//de ser asÃ­ retorna false.
 		
 		return 4<4; //Esto es para que no marque error el archivo.
 	}
 	
 	public void descuento(boolean esRepresentante,int antiguedad, boolean esFuncionario) {
-		//Determina si el socio tiene descuentos según los parámetros ingresados
+		//Determina si el socio tiene descuentos segÃºn los parÃ¡metros ingresados
 		//y modifica el valor de la cuota.
 	}
 	
