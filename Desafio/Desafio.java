@@ -42,7 +42,7 @@ public class Desafio {
 		
 		//Parte 2: Ingresar 2 estudiantes por consola.
 		
-		System.out.println(promedioTotalEstudiantes(estudiante));
+		
 
 
 
@@ -104,19 +104,27 @@ public class Desafio {
 
 	//Parte 7: Mostrar el est. con mayor promedio, el de menor y el promedio de notas del grupo.
 	
-	public static double promedioTotalEstudiantes(double promedio[]) {
+	public static promedioTotalEstudiantes(Estudiante[] alumno) {
 		
 		int suma = 0;
 		double promedioTotalEstudiantes = 0;
+		double promedio;
+		double mayor = Integer.MIN_VALUE;
+		double menor = Integer.MAX_VALUE;
+		Estudiante estudianteMayor;
+		Estudiante estudianteMenor;
 	
 		
-		for(int i=0; i<promedio.length; i++) {
-			suma+= promedio[i];
+		for(int i=0; i<alumno.length; i++) {
+			
+			notas=alumnos[i].getNotas();	
+			promedio=alumnos[i].promedio(notas);
+			suma+=promedio;
+			
+			
 		}
 		
-		promedioTotalEstudiantes = suma / promedio.length;
 		
-		return promedioTotalEstudiantes;
 		
 	}
 
