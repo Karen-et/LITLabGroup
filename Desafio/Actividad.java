@@ -23,7 +23,7 @@ public class Actividad {
 				estudiante[4] = new Estudiante(5, "Michael", notasE5);
 				
 				int[] notasE6 = {8,7,10};
-				estudiante[5] = new Estudiante(6, "José", notasE6);
+				estudiante[5] = new Estudiante(6, "JosÃ©", notasE6);
 				
 				int[] notasE7 = {6,6,6};
 				estudiante[6] = new Estudiante(7, "Eliana", notasE7);
@@ -65,6 +65,13 @@ public class Actividad {
 		}
 		
 		return cont;
+	}
+	
+	public static Estudiante [] mostrarEstudiante (Estudiante [] alumnos) {
+		for (int i=0; i<alumnos.length; i++) {
+		System.out.println(alumnos[i]);
+		}
+		return alumnos;
 	}
 	
 }
