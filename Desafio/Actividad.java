@@ -75,4 +75,22 @@ public class Actividad {
 		}
 	}
 	
+	public static void datosEstudianteInverso (Estudiante [] alumnos) {
+		
+		double promedio;
+		int [] notas;
+		
+		for (int i=0; i<alumnos.length; i++) {	
+			
+			notas= alumnos[i].getNotas();
+			promedio = alumnos[i].promedio(notas);
+			
+			if(promedio> 6.0) {
+				System.out.println("Promedio: "+promedio+" "+Arrays.toString(notas)+" "+alumnos[i].nombre);
+			}
+						
+	}
+		
+	}
+	
 }
