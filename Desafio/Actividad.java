@@ -1,10 +1,12 @@
-package Desafio;
+package LITLabGroup.Desafio;
+
+import java.util.Arrays;
 
 public class Actividad {
 
 	public static void main(String[] args) {
 		
-		Estudiante[] estudiante = new Estudiante[12];
+		Estudiante[] estudiante = new Estudiante[10];
 		
 		//Parte 1
 				int[] notasE1 = {8,7,10};
@@ -23,7 +25,7 @@ public class Actividad {
 				estudiante[4] = new Estudiante(5, "Michael", notasE5);
 				
 				int[] notasE6 = {8,7,10};
-				estudiante[5] = new Estudiante(6, "JosÃ©", notasE6);
+				estudiante[5] = new Estudiante(6, "José", notasE6);
 				
 				int[] notasE7 = {6,6,6};
 				estudiante[6] = new Estudiante(7, "Eliana", notasE7);
@@ -37,7 +39,11 @@ public class Actividad {
 				int[] notasE10 = {4,7,10};
 				estudiante[9] = new Estudiante(10, "Pepito", notasE10);
 				
-				System.out.println(aprobados(estudiante));
+			
+				
+				//System.out.println(aprobados(estudiante));
+				
+				datosEstudianteInverso(estudiante);
 
 	}
 	
@@ -65,6 +71,26 @@ public class Actividad {
 		}
 		
 		return cont;
+	}
+	
+	public static void datosEstudianteInverso (Estudiante [] alumnos) {
+		
+		double promedio;
+		int [] notas;
+	
+		//promedio = estudiantesPorParametro[0].promedio();
+		
+		for (int i=0; i<alumnos.length; i++) {	
+			
+			notas= alumnos[i].getNotas();
+			promedio = alumnos[i].promedio(notas);
+			
+			if(promedio> 6.0) {
+				System.out.println("Promedio: "+promedio+" "+Arrays.toString(notas)+" "+alumnos[i].nombre);
+			}
+						
+		}
+		
 	}
 	
 	public static Estudiante [] mostrarEstudiante (Estudiante [] alumnos) {
