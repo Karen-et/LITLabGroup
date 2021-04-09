@@ -74,6 +74,10 @@ public class Actividad {
 				+ ", horario=" + horario + "]";
 	}
 	
+	public String grupoObjetivo(char sexo, int limiteEdad){ // "M" = masculino, "F" = femenino, "U" = unisex.
+	// Determina el grupo de personas habilitadas para realizar la actividad.
+	}
+	
 	
 	
 }
