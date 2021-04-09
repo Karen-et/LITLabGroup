@@ -1,17 +1,15 @@
 package Desafio;
 
-import java.util.Arrays;
-
 import LITLabGroup.Desafio.Estudiante;
 
 public class Desafio {
 
 	public static void main(String[] args) {
 
-		//Arreglo de estudiantes
+		//Parte 3: Crear un arreglo de estudiantes.
 		Estudiante[] estudiantes = new Estudiante[10];
 
-		//Parte 1: Crear 10 estudiantes pasandole parámetros al constructor.
+		//Parte 1: Crear 10 estudiantes pasandole parÃ¡metros al constructor.
 		int[] notasE1 = {8,7,10};
 		estudiantes[0] = new Estudiante(1, "Paula", notasE1);
 
@@ -28,7 +26,7 @@ public class Desafio {
 		estudiantes[4] = new Estudiante(5, "Michael", notasE5);
 
 		int[] notasE6 = {8,7,10};
-		estudiantes[5] = new Estudiante(6, "José", notasE6);
+		estudiantes[5] = new Estudiante(6, "JosÃ©", notasE6);
 
 		int[] notasE7 = {6,6,6};
 		estudiantes[6] = new Estudiante(7, "Eliana", notasE7);
@@ -52,7 +50,7 @@ public class Desafio {
 		int [] notas;
 		for (int i=0; i<alumnos.length; i++) {
 			notas=alumnos[i].getNotas();	
-			System.out.println("Nombre: "+alumnos[i].nombre+", Preomedio "+(alumnos[i].promedio(notas)));
+			System.out.println("Nombre: "+alumnos[i].nombre+", Promedio "+(alumnos[i].promedio(notas)));
 		}
 	}
 
@@ -101,7 +99,7 @@ public class Desafio {
 
 	}
 
-	//Parte 7: Mostrar el est con mayor promedio, el de menor y el promedio de notas del grupo.
+	//Parte 7: Mostrar el est. con mayor promedio, el de menor y el promedio de notas del grupo.
 
 	//Parte 8: Propuesta del equipo, ordenar los estudiantes por mejor promedio.
 	public static Estudiante[] ordenarPorPromedio(Estudiante[] alumno) {
@@ -124,3 +122,4 @@ public class Desafio {
 	}
 
 }
+
