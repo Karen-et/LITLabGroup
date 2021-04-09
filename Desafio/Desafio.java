@@ -41,6 +41,9 @@ public class Desafio {
 		estudiantes[9] = new Estudiante(10, "Pepito", notasE10);
 		
 		//Parte 2: Ingresar 2 estudiantes por consola.
+		
+		System.out.println(promedioTotalEstudiantes(estudiante));
+
 
 
 	}
@@ -100,6 +103,22 @@ public class Desafio {
 	}
 
 	//Parte 7: Mostrar el est. con mayor promedio, el de menor y el promedio de notas del grupo.
+	
+	public static double promedioTotalEstudiantes(double promedio[]) {
+		
+		int suma = 0;
+		double promedioTotalEstudiantes = 0;
+	
+		
+		for(int i=0; i<promedio.length; i++) {
+			suma+= promedio[i];
+		}
+		
+		promedioTotalEstudiantes = suma / promedio.length;
+		
+		return promedioTotalEstudiantes;
+		
+	}
 
 	//Parte 8: Propuesta del equipo, ordenar los estudiantes por mejor promedio.
 	public static Estudiante[] ordenarPorPromedio(Estudiante[] alumno) {
