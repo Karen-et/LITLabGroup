@@ -42,8 +42,7 @@ public class Desafio {
 		
 		//Parte 2: Ingresar 2 estudiantes por consola.
 		
-		
-
+		promedioTotalEstudiantes(estudiantes);
 
 
 	}
@@ -103,28 +102,44 @@ public class Desafio {
 	}
 
 	//Parte 7: Mostrar el est. con mayor promedio, el de menor y el promedio de notas del grupo.
-	
-	public static promedioTotalEstudiantes(Estudiante[] alumno) {
+	public static void promedioTotalEstudiantes(Estudiante[] alumno) {
 		
 		int suma = 0;
-		double promedioTotalEstudiantes = 0;
+		int[] notas;
 		double promedio;
-		double mayor = Integer.MIN_VALUE;
-		double menor = Integer.MAX_VALUE;
-		Estudiante estudianteMayor;
-		Estudiante estudianteMenor;
+		double mayor = alumno[0].promedio(alumno[0].getNotas());
+		double menor = alumno[0].promedio(alumno[0].getNotas());
+		Estudiante estudianteMayor = alumno[0];
+		Estudiante estudianteMenor= alumno[0];
 	
 		
 		for(int i=0; i<alumno.length; i++) {
 			
-			notas=alumnos[i].getNotas();	
-			promedio=alumnos[i].promedio(notas);
-			suma+=promedio;
 			
+			notas=alumno[i].getNotas();	
+			promedio=alumno[i].promedio(notas);
+			
+			//Guardo el estudiante con mayor promedio.
+			if(promedio>mayor) {
+				estudianteMayor = alumno[i];
+				mayor = promedio;
+			}
+			
+			// Guardo el estudiante con menor promedio.
+			if(promedio<menor) {
+				estudianteMenor = alumno[i];
+				menor = promedio;
+			}
+			
+			suma+=promedio;
 			
 		}
 		
+		promedio = suma/alumno.length;
 		
+		System.out.println(estudianteMayor.nombre+" tiene el mayor promedio.");
+		System.out.println(estudianteMenor.nombre+" tiene el menor promedio");
+		System.out.println("El promedio de la clase es: "+promedio);
 		
 	}
 
