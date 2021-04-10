@@ -39,10 +39,54 @@ public class Desafio {
 
 		int[] notasE10 = {4,7,10};
 		estudiantes[9] = new Estudiante(10, "Pepito", notasE10);
-		
+
 		//Parte 2: Ingresar 2 estudiantes por consola.
+
+		//Cargar el primer estudiante.
+		Estudiante e11 = new Estudiante();
+
+		Scanner teclado = new Scanner(System.in);
+
+		System.out.print("Ingrese su ID de estudiante ");
+		e11.idEstudiante = teclado.nextInt();
+
+		System.out.print("Ingrese su nombre ");
+		e11.nombre = teclado.next();
+
+		int[] notasE11 = new int[3];
+		System.out.println("Ingrese sus notas");
+		//Las notas se ingresan en la misma linea.
+		notasE11[0] = teclado.nextInt();
+		notasE11[1] = teclado.nextInt();
+		notasE11[2] = teclado.nextInt();
 		
-		promedioTotalEstudiantes(estudiantes);
+
+		e11.setNotas(notasE11);
+
+		System.out.println(e11);
+		
+		System.out.println("------------------------------------------");
+		
+		
+		//Cargar el 2do estudiante
+		Estudiante e12 = new Estudiante();
+
+		System.out.print("Ingrese su ID de estudiante ");
+		e12.idEstudiante = teclado.nextInt();
+
+		System.out.print("Ingrese su nombre ");
+		e12.nombre = teclado.next();
+
+		int[] notasE12 = new int[3];
+		System.out.println("Ingrese sus notas");
+		//Las notas se ingresan en la misma linea.
+		notasE12[0] = teclado.nextInt();
+		notasE12[1] = teclado.nextInt();
+		notasE12[2] = teclado.nextInt();
+
+		e12.setNotas(notasE12);
+
+		System.out.println(e12);
 
 
 	}
@@ -103,7 +147,7 @@ public class Desafio {
 
 	//Parte 7: Mostrar el est. con mayor promedio, el de menor y el promedio de notas del grupo.
 	public static void promedioTotalEstudiantes(Estudiante[] alumno) {
-		
+
 		int suma = 0;
 		int[] notas;
 		double promedio;
@@ -111,36 +155,36 @@ public class Desafio {
 		double menor = alumno[0].promedio(alumno[0].getNotas());
 		Estudiante estudianteMayor = alumno[0];
 		Estudiante estudianteMenor= alumno[0];
-	
-		
+
+
 		for(int i=0; i<alumno.length; i++) {
-			
-			
+
+
 			notas=alumno[i].getNotas();	
 			promedio=alumno[i].promedio(notas);
-			
+
 			//Guardo el estudiante con mayor promedio.
 			if(promedio>mayor) {
 				estudianteMayor = alumno[i];
 				mayor = promedio;
 			}
-			
+
 			// Guardo el estudiante con menor promedio.
 			if(promedio<menor) {
 				estudianteMenor = alumno[i];
 				menor = promedio;
 			}
-			
+
 			suma+=promedio;
-			
+
 		}
-		
+
 		promedio = suma/alumno.length;
-		
+
 		System.out.println(estudianteMayor.nombre+" tiene el mayor promedio.");
 		System.out.println(estudianteMenor.nombre+" tiene el menor promedio");
 		System.out.println("El promedio de la clase es: "+promedio);
-		
+
 	}
 
 	//Parte 8: Propuesta del equipo, ordenar los estudiantes por mejor promedio.
