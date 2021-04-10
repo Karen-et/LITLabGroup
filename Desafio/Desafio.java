@@ -106,7 +106,7 @@ public class Desafio {
 		int cont = 0;
 		boolean aprobado;
 
-		for(int i=0; i<10; i++) {
+		for(int i=0; i<alumnos.length; i++) {
 
 			aprobado = true;
 			int[] notas = alumnos[i].getNotas();
