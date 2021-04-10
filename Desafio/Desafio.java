@@ -7,7 +7,7 @@ public class Desafio {
 	public static void main(String[] args) {
 
 		//Parte 3: Crear un arreglo de estudiantes.
-		Estudiante[] estudiantes = new Estudiante[10];
+		Estudiante[] estudiantes = new Estudiante[12];
 
 		//Parte 1: Crear 10 estudiantes pasandole parámetros al constructor.
 		int[] notasE1 = {8,7,10};
@@ -63,7 +63,7 @@ public class Desafio {
 
 		e11.setNotas(notasE11);
 
-		System.out.println(e11);
+		estudiantes[10] = e11;
 		
 		System.out.println("------------------------------------------");
 		
@@ -86,7 +86,7 @@ public class Desafio {
 
 		e12.setNotas(notasE12);
 
-		System.out.println(e12);
+		estudiantes[11] = e12;
 
 
 	}
