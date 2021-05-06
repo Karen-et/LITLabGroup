@@ -23,7 +23,7 @@ public class ej1Excepciones {
 			if(valorEntrada==i) {
 				System.out.println("El valor contenido en la posicion "+valorEntrada+" es "+arrayPersonas[i]);
 			}
-			else if ((valorEntrada>arrayPersonas.length)||(valorEntrada<0)) {
+			else if ((valorEntrada>=arrayPersonas.length)||(valorEntrada<0)) {
 				throw new ExceptionsValidator ("El valor ingresado esta fuera de rango");
 			}
 		}
